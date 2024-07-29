@@ -2,7 +2,7 @@ const express = require('express')
 
 const logger = require('morgan')
 const cors = require('cors')
-const booksRouter = require('./routes/user/booksRouter')
+const booksRouter = require('./routes/product/booksRouter')
 
 
 const app = express()

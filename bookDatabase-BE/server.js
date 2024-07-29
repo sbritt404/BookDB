@@ -1,4 +1,6 @@
+const express = require('express')
 const mongoose = require('mongoose')
+
 
 const app = require('./app')
 const port = 3000
@@ -11,7 +13,12 @@ mongoose
             console.log('MongoDB connected.')
         })
     })
-
     .catch((error) => {
         console.log(error)
     })
+
+    const app = express()
+
+    app.use(logger('dev'))
+    app.use(express.json())
+    
